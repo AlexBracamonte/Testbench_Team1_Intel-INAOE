@@ -133,10 +133,3 @@ if __name__ == '__main__':
     test1.obtener_io()
     test1.definir_entradas()
     test1.escribe_TB()
-
-    test2 = GeneradorTest(name="design2.sv", out_name="test2.sv")
-    test2.leer_documento()
-    test2.Obtener_Nombre_Modulo()
-    test2.obtener_io()
-    test2.definir_entradas()
-    test2.escribe_TB()
