@@ -444,37 +444,10 @@ int main()
     test1.abrir_archivo();
     test1.Obtener_Nombre_Modulo();
     test1.Obtener_IO();
-    for (string aux : test1.entradas)
-        cout << aux << endl;
-    for (string aux : test1.salidas)
-        cout << aux << endl;
-
     test1.Mapear_Variables();
     test1.asignar_valores();
     test1.obtener_valores_utt();
     test1.crea_tb("testbench1.sv");
-
-    cout << endl
-         << endl
-         << "\t\t****************" << endl
-         << "\t\t*  design2.sv  *" << endl
-         << "\t\t****************" << endl
-         << endl;
-
-    Inicializador test2("design2.sv");
-    test2.abrir_archivo();
-    test2.Obtener_Nombre_Modulo();
-    test2.Obtener_IO();
-    for (string aux : test2.entradas)
-        cout << aux << endl;
-    for (string aux : test2.salidas)
-        cout << aux << endl;
-
-    test2.Mapear_Variables();
-    test2.asignar_valores();
-    test2.obtener_valores_utt();
-    test2.crea_tb("testbench2.sv");
-
 
     system("pause");
     return 0;
