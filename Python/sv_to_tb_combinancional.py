@@ -43,6 +43,7 @@ class GeneradorTest:
 
     def escribe_TB(self):
         variables = self.mapear_variables()
+        print("inpime esto: ",variables)
         with open(f"{self.out_name}", "w+") as testbench:
             testbench.write("`timescale 1ns/1ns\n\n")
             testbench.write(f"module {self.nombre_modulo}_TB;\n")
@@ -127,7 +128,7 @@ class GeneradorTest:
 
 
 if __name__ == '__main__':
-    test1 = GeneradorTest(name="design.sv", out_name="test.sv")
+    test1 = GeneradorTest(name="design1.sv", out_name="test1.sv")
     test1.leer_documento()
     test1.Obtener_Nombre_Modulo()
     test1.obtener_io()
