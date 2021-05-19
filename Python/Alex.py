@@ -1,4 +1,24 @@
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(message)s - %(processName)s',
+)
+
 """ ---- Modulo ingresado ---- """
+    
+  def preguntar(self):
+        if self.clk:
+            print("Es secuencial")
+        else:
+            print("Es combinacional")
+            self.circuito = Combinacional(entradas=self.e_s)
+            self.variables, num = self.circuito.mapear_variables()
+            self.variables_utt = self.circuito.definir_parametros_uut(self.variables)
+            print(f"El largo es {num}")
+            if 0 < num < 6:
+                self.signals = self.circuito.definir_entradas()
+            else:
+                print(f"Son muchas variables. {2 ** num} posibles casos")
+                self.signals = self.circuito.leer_variables_usuario(self.doc_cri)
 
   def leer_variables_usuario(self, doc):
         try:
